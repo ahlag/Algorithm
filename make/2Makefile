@@ -1,0 +1,15 @@
+OBJECT = main.o func.o
+INCLUDE=
+LIB = -lm
+CC=g++
+CFLAG = -g -O2
+.c.o :
+	$(CC) $(INCLUDE) -c $<
+TARGET = calc.out
+
+all : $(OBJECT)
+	@echo "*** Making $(TARGET) ***"
+	$(CC) $(CFLAG) $(INCLUDE) -o $(TARGET) $(OBJECT) $(LIB)
+
+clean :
+	rm -f a.out coe *.s *.o *.~
