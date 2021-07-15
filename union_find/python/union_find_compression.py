@@ -17,7 +17,7 @@ class UnionFind:
         while self.parents[x] != root:
             parent = self.parents[x]
             self.parents[x] = root
-            x = root
+            x = parent
 
         return root
     
